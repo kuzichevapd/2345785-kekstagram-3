@@ -6,7 +6,7 @@ function getRandomInt(numberFrom, numberTo) {
     return numberFrom;
   }
   return Math.floor(numberFrom + (numberTo - numberFrom + 1) * Math.random());
-};
+}
 
 function checkLength(str, len) {
   len = Number(len);
