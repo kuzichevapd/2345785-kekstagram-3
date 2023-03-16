@@ -1,13 +1,18 @@
-const randomInt = function(numberFrom, numberTo) {
+function getRandomInt(numberFrom, numberTo) {
   if (numberFrom > numberTo || numberFrom < 0 || numberTo < 0) {
     return 0;
   }
-  if (numberFrom == numberTo) {
+  if (numberFrom === numberTo) {
     return numberFrom;
   }
   return Math.floor(numberFrom + (numberTo - numberFrom + 1) * Math.random());
 };
 
-const checkLength = function(str, maxLen) {
-  return(str.length <= maxLen)
-};
+function checkLength(str, len) {
+  len = Number(len);
+  str = String(str);
+  if (len < 0) {
+    return 0;
+  }
+  return str.length <= len;
+}
