@@ -21,9 +21,9 @@ function generatePicture(object) {
 
 function displayPictures(objects) {
   const fragment = new DocumentFragment();
-  picturesData.forEach((object) => {
-    fragment.append(generatePicture(objects));
-  });
+  for (let i = 0; i < objects.length; i++) {
+    fragment.append(generatePicturesFromObject(objects[i]));
+  }
   document.querySelector('.pictures').append(fragment);
 }
 

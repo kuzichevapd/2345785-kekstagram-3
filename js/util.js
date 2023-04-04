@@ -17,4 +17,4 @@ function checkLength(str, len) {
   return str.length <= len;
 }
 
-export {getRandomInt, checkLength }
+export {getRandomInt, checkLength };
