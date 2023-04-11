@@ -22,11 +22,11 @@ function generatePicture(object) {
 function displayPictures(objects) {
   const fragment = new DocumentFragment();
   for (let i = 0; i < objects.length; i++) {
-    fragment.append(generatePicturesFromObject(objects[i]));
+    fragment.append(generatePicture(objects[i]));
   }
   document.querySelector('.pictures').append(fragment);
 }
 
-export { displayPictures }
+export { displayPictures };
 
 
