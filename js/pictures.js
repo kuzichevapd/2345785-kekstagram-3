@@ -1,4 +1,4 @@
-const pictureTemplate = document.querySlector('#picture');
+const pictureTemplate = document.querySelector('#picture');
 
 function generatePicture(object) {
   const picture = document.createElement('div');
