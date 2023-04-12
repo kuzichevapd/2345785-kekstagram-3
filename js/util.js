@@ -17,4 +17,9 @@ function checkLength(str, len) {
   return str.length <= len;
 }
 
+function isEscKeyPressed(evt) {
+  return evt.key === 'Escape';
+}
+
 export {getRandomInt, checkLength };
+export {isEscKeyPressed};
