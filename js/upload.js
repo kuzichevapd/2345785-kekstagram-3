@@ -9,6 +9,7 @@ const photoEditor = document.querySelector('.img-upload__overlay');
 const body = document.body;
 const closeButton = document.querySelector('#upload-cancel');
 
+
 function onFormEscKeydown(evt) {
   if (isEscKeyPressed(evt)) {
     evt.preventDefault();
