@@ -1,8 +1,8 @@
-// точка входа
-//Задание 7 часть 2
 import { photos } from './data.js';
 import { displayPictures} from './pictures.js';
 import './upload.js';
+import { validateForm } from './validation.js';
+import { getData } from './api.js';
 
-
-displayPictures(photos);
+validateForm();
+getData(displayPictures(photos));

@@ -1,7 +1,7 @@
 const imagePreview = document.querySelector('.img-upload__preview img');
 const scaleControl = document.querySelector('.img-upload__scale');
 const scaleValue = document.querySelector('.scale__control--value');
-const DEFAULT_SCALE = 100;
+export const DEFAULT_SCALE = 100;
 
 function getCurrentImageScale() {
   return 100 * imagePreview.style.transform.replace(/[^0-9.,]+/g, '');
@@ -21,7 +21,7 @@ function makeBiggerImage() {
   }
 }
 
-function updateImageScaleValue() {
+export function updateImageScaleValue() {
   const currentImageScale = getCurrentImageScale();
   scaleValue.value = `${currentImageScale}%`;
 }
@@ -38,6 +38,3 @@ function changeScale (evt) {
 
 scaleControl.addEventListener('click', changeScale);
 
-export {imagePreview};
-export {updateImageScaleValue};
-export {DEFAULT_SCALE};
