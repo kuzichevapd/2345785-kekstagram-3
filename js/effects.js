@@ -1,7 +1,7 @@
 const listOfEffects = document.querySelector('.effects__list');
 const imagePreview = document.querySelector('.img-upload__preview img');
 
-function changeEffect (evt) {
+export function changeEffect (evt) {
   if (evt.target.matches('#effect-none')) {
     imagePreview.className = 'effects__preview--none';
   }
@@ -25,4 +25,3 @@ function changeEffect (evt) {
 
 listOfEffects.addEventListener('change', changeEffect);
 
-export {changeEffect};

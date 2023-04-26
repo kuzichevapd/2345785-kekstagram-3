@@ -19,7 +19,7 @@ function generatePicture(object) {
 }
 
 
-function displayPictures(objects) {
+export function displayPictures(objects) {
   const fragment = new DocumentFragment();
   for (let i = 0; i < objects.length; i++) {
     fragment.append(generatePicture(objects[i]));
@@ -27,6 +27,5 @@ function displayPictures(objects) {
   document.querySelector('.pictures').append(fragment);
 }
 
-export { displayPictures };
 
 

@@ -1,4 +1,4 @@
-function getRandomInt(numberFrom, numberTo) {
+export function getRandomInt(numberFrom, numberTo) {
   if (numberFrom > numberTo || numberFrom < 0 || numberTo < 0) {
     return 0;
   }
@@ -8,7 +8,7 @@ function getRandomInt(numberFrom, numberTo) {
   return Math.floor(numberFrom + (numberTo - numberFrom + 1) * Math.random());
 }
 
-function checkLength(str, len) {
+export function checkLength(str, len) {
   len = Number(len);
   str = String(str);
   if (len < 0) {
@@ -17,9 +17,17 @@ function checkLength(str, len) {
   return str.length <= len;
 }
 
-function isEscKeyPressed(evt) {
+export function isEscKeyPressed(evt) {
   return evt.key === 'Escape';
 }
 
-export {getRandomInt, checkLength };
-export {isEscKeyPressed};
+export function addHideHandler (element, hideHandler) {
+  element.addEventListener('click', hideHandler);
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape') {
+      hideHandler();
+    }
+  });
+};
+
+
