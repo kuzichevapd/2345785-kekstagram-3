@@ -3,6 +3,7 @@ import { updateImageScaleValue } from "./scale.js";
 import { DEFAULT_SCALE } from "./scale.js";
 import { changeEffect } from "./effects.js";
 import { addHideHandler } from "./util.js";
+import { resetEffect } from "./effects.js";
 
 const imagePreview = document.querySelector('.img-upload__preview img');
 const uploadField = document.querySelector('#upload-file');
@@ -12,22 +13,30 @@ const closeButton = document.querySelector('#upload-cancel');
 const submitButton = document.querySelector('.img-upload__submit');
 
 
-function onFormEscKeydown(evt) {
+const onFormEscKeydown = function (evt) {
   if (isEscKeyPressed(evt)) {
     evt.preventDefault();
     closePhotoEditorForm();
   }
 }
 
-export function closePhotoEditorForm() {
+export const closePhotoEditorForm = function () {
   photoEditor.classList.add('hidden');
   body.classList.remove('modal-open');
   uploadField.value = '';
   closeButton.removeEventListener('click', closePhotoEditorForm);
   document.removeEventListener('keydown', onFormEscKeydown);
+  cleanForm();
 }
 
-export function openPhotoEditorForm() {
+export const cleanForm = function ()  {
+  document.querySelector('.text__hashtags').value = '';
+  document.querySelector('.text__description').value = '';
+  resetEffect();
+  document.querySelector('.scale__control--value').value = '100%';
+};
+
+export const openPhotoEditorForm = function () {
   imagePreview.style.transform = `scale(${DEFAULT_SCALE / 100})`;
   updateImageScaleValue();
   photoEditor.classList.remove('hidden');

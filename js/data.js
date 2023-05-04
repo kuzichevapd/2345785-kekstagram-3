@@ -9,7 +9,7 @@ let descriptions = [
 
 let photos = [];
 let i;
-for (i = 1; i < 25; i++) {
+for (i = 1; i <= 25; i++) {
   photos.push ({
     id: i,
     url: `photos/${i}.jpg`,
@@ -18,7 +18,5 @@ for (i = 1; i < 25; i++) {
     comments: getRandomInt(0, 200),
   });
 }
-
-
 
 export {photos};

@@ -4,6 +4,7 @@ import {closePhotoEditorForm, openPhotoEditorForm,
    blockSubmitButton, unblockSubmitButton} from './upload.js';
 import {postData} from './api.js';
 
+
 const image = document.querySelector('.img-upload__preview > img');
 const form = document.querySelector('#upload-select-image');
 
@@ -26,8 +27,8 @@ export const validateForm = function () {
     if (pristine.validate()) {
       blockSubmitButton();
       postData(new FormData(evt.target),
-        showSuccessMessage,
-        showErrorMessage,
+      showSuccessMessage,
+      showErrorMessage,
         () => {unblockSubmitButton(); closePhotoEditorForm();}
       );
     }

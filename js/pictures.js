@@ -1,6 +1,6 @@
 const pictureTemplate = document.querySelector('#picture');
 
-function generatePicture(object) {
+const generatePicture = function (object) {
   const picture = document.createElement('div');
   const pictureClone = pictureTemplate.content.cloneNode(true);
   picture.classList.add('picture');
@@ -19,7 +19,7 @@ function generatePicture(object) {
 }
 
 
-export function displayPictures(objects) {
+export const displayPictures = function (objects) {
   const fragment = new DocumentFragment();
   for (let i = 0; i < objects.length; i++) {
     fragment.append(generatePicture(objects[i]));

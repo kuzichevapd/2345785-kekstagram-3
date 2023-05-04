@@ -1,4 +1,4 @@
-export function getRandomInt(numberFrom, numberTo) {
+export const getRandomInt = function (numberFrom, numberTo) {
   if (numberFrom > numberTo || numberFrom < 0 || numberTo < 0) {
     return 0;
   }
@@ -8,7 +8,7 @@ export function getRandomInt(numberFrom, numberTo) {
   return Math.floor(numberFrom + (numberTo - numberFrom + 1) * Math.random());
 }
 
-export function checkLength(str, len) {
+export const checkLength = function (str, len) {
   len = Number(len);
   str = String(str);
   if (len < 0) {
@@ -17,11 +17,11 @@ export function checkLength(str, len) {
   return str.length <= len;
 }
 
-export function isEscKeyPressed(evt) {
+export const isEscKeyPressed = function (evt) {
   return evt.key === 'Escape';
 }
 
-export function addHideHandler (element, hideHandler) {
+export const addHideHandler = function (element, hideHandler) {
   element.addEventListener('click', hideHandler);
   document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape') {
