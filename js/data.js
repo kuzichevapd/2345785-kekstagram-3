@@ -1,11 +1,11 @@
 import {getRandomInt} from './util.js';
 
-let descriptions = [
+const descriptions = [
   'круто',
   'классно',
   'отлично',
   'фантастика'
-]
+];
 
 let photos = [];
 let i;

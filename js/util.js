@@ -28,6 +28,6 @@ export const addHideHandler = function (element, hideHandler) {
       hideHandler();
     }
   });
-};
+}
 
 

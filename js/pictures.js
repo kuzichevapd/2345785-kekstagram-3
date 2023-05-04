@@ -26,6 +26,3 @@ export const displayPictures = function (objects) {
   }
   document.querySelector('.pictures').append(fragment);
 }
-
-
-
